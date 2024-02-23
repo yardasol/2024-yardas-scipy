@@ -1,43 +1,52 @@
-# Lessons from working on SaltProc: An open-source wrapper for simulating batchwise reprocessing in nuclear reactors.
+# Software sustainability for codes with budding communities: lessons from working on SaltProc
 
 ## Abstract
 SaltProc is an open source tool for simulating batch-wise reprocessing of fuel
-in nuclear reactors. Originally developed as a wrapper around a closed source
-depletion solver, the introduction of depletion capabilities to OpenMC, a
-community-developed neutron transport code, inspired me to implement in interface to it
-for a fully open software stack. My poster will focus on the development process of
-adding this feature as well as discuss design decisions that were made, problems I ran
-into during the development process, improvements to the sustainability of the software.
+in nuclear reactors. SaltProc was initally developed as a wrapper around a
+closed source export controlled depletion solver. This design decision limited
+the size of the userbase. To try to grow the userbase, I began to contribute
+features towards implementing an interface for an open-source alternative, and
+eventually became the maintainer of the software, driving design and development
+practices for the entire codebase. My poster will focus on what code sustainability
+looks like in practice developers of codes with budding communities.
+
+as well as discuss design decisions that were made, problems I ran into during the development process, and improvements made to the sustainability of the software.
 Finally I will show results comparing the two depletion solvers in the final implementation.
 
 ## Description
 Neutron radiation in the fuel inside of a nuclear reactor induces nuclear
 fission in certain nuclides like U235. The fission reaction causes the
 nucleus to break apart, releasing both energy and new nuclides, many of which
-are radioactive isostopes of smaller elements. This process
+are radioactive isotopes of smaller elements. This process
 is referred to as depletion or burnup. Some of these nuclides inhibit the
-nuclear reaction, and greater fuel efficency can be achieved by chemical
+nuclear reaction, and greater fuel efficiency can be achieved by chemical
 reprocessing of the fuel to remove them.
 
-SaltProc is a code for simulating chemical fuel reprocessing for nuclear reactors.
-It was originally developed to wrap around Serpent2, a closed source
-neutron transport code with a depletion solver. While the original developer
-of SaltProc had intended for it to be code-agnostic, my experience with the code
-tells that this design pattern can be challenging to implement effectively in advacne
-when leaving the interface implementation for other codes to future developers.
+SaltProc is a code for simulating chemical reprocessing of nuclear reactor fuel
+in molten salt reactors. It was originally developed to wrap around Serpent2,
+a closed source export controlled neutron transport code with a depletion solver.
+While the original developer of SaltProc had intended for it to be code-agnostic
+with respect to the depletion solver used, the small user base meant any contributions
+were typically only performed by the core maintainer, so no additional interfaces were
+ever developed. Small projects like this typically die out once the author leaves
+due to code neglect and lack of community momentum. When OpenMC, a community
+developed open source neutron transport code gained a depletion solver, I wanted
+to implement an interface for it to make SaltProc more accessible to new users and
+grow the community.
 
 In this poster, I will cover:
-- The basic mathematics of depletion. (maybe remove this one)
-- My approach to bringing effective code-agnosticism into a previously existing project
-- The difficulties of taking on the role of maintainer in an open-source code with a small userbase
-- Various snags I ran into related to dependencies and how I solved them
+- Strategies to increase code sustainability in an open-source code with a small user base
+- What could have made the process from going from a user to a developer more smooth
 - Utility of technologies like input schemas and CI for code sustainability
-- How I improved the sustainability of the code by improving documentation, variable names, and program flow.
-- The results of my code additions compared to the old imlementation.
+- Good approaches for bringing large features into previously existing projects
+- Various snags I ran into related to dependencies and how I approached solving them
+- The results of my code additions compared to the old implementation.
 
-My indented audience is folks who are starting to get into open source software
-development, as well as developers who are interested in software sustainability,
-who want to learn more about...
+The intended audience of this poster are folks who are interested in software
+sustainability who want learn about what it looks like in a code with a small or
+growing community. The intended takeaways are that developing features and maintaining
+a code with a small community requires lots of consistency, patience, and planning to
+do sustainably.
 
 ## Notes
 This could also be in the Maintainers and community track.
