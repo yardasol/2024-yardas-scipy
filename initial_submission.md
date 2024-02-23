@@ -1,4 +1,4 @@
-# Software sustainability for codes with budding communities: lessons from working on SaltProc
+# Building sustainabiltity and community in a small project: lessons from working on SaltProc
 
 ## Abstract
 SaltProc is an open source tool for simulating batch-wise reprocessing of fuel
@@ -7,11 +7,11 @@ closed source export controlled depletion solver. This design decision limited
 the size of the userbase. To try to grow the userbase, I began to contribute
 features towards implementing an interface for an open-source alternative, and
 eventually became the maintainer of the software, driving design and development
-practices for the entire codebase. My poster will focus on what code sustainability
-looks like in practice developers of codes with budding communities.
-
-as well as discuss design decisions that were made, problems I ran into during the development process, and improvements made to the sustainability of the software.
-Finally I will show results comparing the two depletion solvers in the final implementation.
+practices for the entire codebase. My poster will focus on how I approached sustainbility
+in SaltProc, and specificaly how I used abstract classes to bring modularity to the code,
+how using input schema and documentation incereases ease of use for future users, and how
+I used GitHub Discussions to foster community with a forum for users to interact with
+developers.
 
 ## Description
 Neutron radiation in the fuel inside of a nuclear reactor induces nuclear
@@ -24,13 +24,13 @@ reprocessing of the fuel to remove them.
 
 SaltProc is a code for simulating chemical reprocessing of nuclear reactor fuel
 in molten salt reactors. It was originally developed to wrap around Serpent2,
-a closed source export controlled neutron transport code with a depletion solver.
+a closed source export controlled Monte Carlo neutron transport code with a depletion solver.
 While the original developer of SaltProc had intended for it to be code-agnostic
 with respect to the depletion solver used, the small user base meant any contributions
 were typically only performed by the core maintainer, so no additional interfaces were
 ever developed. Small projects like this typically die out once the author leaves
 due to code neglect and lack of community momentum. When OpenMC, a community
-developed open source neutron transport code gained a depletion solver, I wanted
+developed open source neutron transport code, gained a depletion solver, I wanted
 to implement an interface for it to make SaltProc more accessible to new users and
 grow the community.
 
