@@ -46,13 +46,52 @@ Venters et al. (2018):
             on models to develop sustainable software, approaches for evaluating
             sustainability
             - *Maybe loop back to these later, could be useful for analysis*
+        - There are also models for softawre sustainability evaluation.
+        - Three main concepts this article focuses on
+            1. Software sustainability: capacity of software to "endure"
+            2. Software *architecture* sustainability: capacity of software to
+               endure is contingent upon its structures and their ability oto
+               evolve
+            3. Sustainabile architecture design decisions: the architecture
+               reflects the design decisions.
         - 
     - section 3: Address sustainability from an architectuer POV
+        - Software architectures are the critical factor in the capacity of
+            software systems to endure and evolve
+        - Sustainability of architecture requires the ability to tolerate
+            changes (from shifts  in requirements, technologies, goals, etc)
+        - Artchitecutre sustainability is *degraded* by two phenomena:
+            1. architecture drift: divergence from underlying architecture
+            2. architecture erosion: when source code becomes sub-optimal
+               compared to the designed architecture\
+        - One approach to design flexible open archtictures that are
+            sustainable: design them to accomodate future changes to a greater
+            extent withoout significant change to the basic structure of the
+            system with minimal cost (omfg this sentence is gonna be the end of
+            me)
+        - reference archituectures embody the architectural knowledge of
+            success. However many seferecne archicteuctures have not survived
+        - Principal factors that make referencece architectures sustaina
+        - *Critical factor in long-term existsnce of reference architectures is
+            that their communities sustain them.*
     - Section 4: Describe how architecture design decisions must be sustainable
+        - Sustainability debt: how technical debt can be used to identify the
+            effects of software design decisions on sustainability
+        - Sustainability of software design relys on factors required to capture
+            design decisions, in particular lack of tools to captures
+            architectural knowledge (AK)
     - Section 5: Address software metrics related to estimating sustainability
+        - Code 
     - Section 6: Provides perspectives from academia, awareness of
-        susstainability w.r.t scientific and engineering research software
+      sustainability w.r.t scientific and engineering research software
+        -  
     - Section 7: Open isses
 
 Venters et al. (2023):
-
+    - all software intensive systems have an architecture even when it is not
+        explicitly designed. These accidental software architectures are
+        underpinned by sub-optimal design decisions that exacerbate
+        complexity -> foundation for software decaty and death in investment.
+    - Research software should be a sustainable, fisrt class, experimental
+        scienteific instrument.
+    - Architecturally significant requirements: extensibility, maintainability.
