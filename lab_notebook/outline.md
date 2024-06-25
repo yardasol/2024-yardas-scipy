@@ -39,6 +39,35 @@ What works:
         write docuentation, write examples/guides along side the code along with
         the normal presence of docstrings. It's even better if you webhost
         documentation using github pages or another free service.
-    - 
+    - For a more comprehensive overivew, check out "Best practices" or "good
+        enough practices" papers
+
+Strategies to increase code sustainability and build community:
+    - A big part of sustainability of a software project is the presence of a
+      community. People in the community will use the software, suggeste
+      features, report and fix bugs, and generally improve the project.
+    - A good way to build community is 1) make your project as user-friendly as
+      possible (web hosted docs with guides and examples, explanation of input
+      and output files), 2) Provide a place for your community to engage (I used
+      github discissions for this), and 3) a little bit of luck!
+    - Using input schemas gives input files not only a defined structure, but a
+        way to check their correctness before execution. This gives code a more
+        professional feeling, and any changes in the input file structure will
+        be reflected in the change of the schema.
+    - Using automation as much as possible will make your job easier in the long
+        run. At the very minium, having an automated testing workflow set up
+        will enable you and your growing community to detect bugs from
+        contributions to code before they are merged.
+    - Follow well established practices for coding: use smart variable names. If
+        you are simulating a physical system, name the variables accordingly.
+        Have someone else look at your code before merging any changes, even if
+        you think a change is trivial. 
+
+Dependency snags:
+( do I even want to discuss this? )
+    - Sometimes in a software project, you will run into issues with
+        dependencies. This must be addressed and can be very frustrating to deal
+        with. 
+
 Main takeaway:
     - 
